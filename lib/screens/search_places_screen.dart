@@ -60,7 +60,7 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
         decoration: InputDecoration(
             hintText: 'Search',
             focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(20), borderSide: BorderSide(color: Colors.white))),
-        components: [Component(Component.country,"pk"),Component(Component.country,"usa")]);
+        components: [Component(Component.country,"my"),Component(Component.country,"usa")]);
 
 
     displayPrediction(p!,homeScaffoldKey.currentState);
@@ -83,12 +83,15 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
   }
 
   Future<void> displayPrediction(Prediction p, ScaffoldState? currentState) async {
+    print('##################################### p ->>>>>>> ');
+    print(p.description);
 
     GoogleMapsPlaces places = GoogleMapsPlaces(
         apiKey: kGoogleApiKey,
         apiHeaders: await const GoogleApiHeaders().getHeaders()
     );
 
+    //print(p);
     PlacesDetailsResponse detail = await places.getDetailsByPlaceId(p.placeId!);
 
     final lat = detail.result.geometry!.location.lat;

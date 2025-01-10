@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
             //
             //
             // ElevatedButton(onPressed: (){
-            //   Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
+            //   Navigator.of(context).push(MaterialPageRoute(buiRlder: (BuildContext context){
             //     return const PolylineScreen();
             //   }));
             // }, child: const Text("Polyline between 2 points"))

@@ -42,6 +42,7 @@ dependencies:
   awesome_snackbar_content: ^0.1.5
   #http: ^1.2.2
   http: ^0.13.1
+  google_api_headers: ^1.6.0
 
 dev_dependencies:
   flutter_test:
@@ -95,3 +96,7 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+dependency_overrides:
+  google_api_headers:
+    git:
+      url: https://github.com/zeshuaro/google_api_headers.git
